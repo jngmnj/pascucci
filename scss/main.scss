@@ -140,7 +140,7 @@ header {
   .main-menu {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 120px;
     display: flex;
     .item {
       .item__name {
@@ -153,12 +153,12 @@ header {
         position: fixed;
         left: 0;
         display: none;
-        z-index: 1;
+        z-index: 2;
         .contents__menu {
           background-color: $gray3;
           & > ul {
             display: flex;
-            padding: 20px 0;
+            padding: 20px 0 60px;
             & >li {
               width: 220px;
               h4 {
@@ -189,18 +189,43 @@ header {
           display: block;
         }
       }
-      // .sns {
-      //   .facebook {
-      //     background-image: url("../images/ic_sns_facebook.png");
-      //   }
-      //   .blog {}
-      //   .instagram {}
-      //   .youtube {}
-      //   .happypoint {}
-      // }      
+            
 
     }
   }
+  .sns {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    li{
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: 0 2px;
+      margin-bottom: 34px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .facebook {
+      background-image: url("../images/ic_sns_facebook.png");
+     
+    }
+    .blog {
+      background-image: url("../images/ic_sns_blog.png");
+
+    }
+    .instagram {
+      background-image: url("../images/ic_sns_insta.png");
+    }
+    .youtube {
+      background-image: url("../images/ic_sns_youtube.png");
+    }
+    .happypoint {
+      background-image: url("../images/ic_sns_happy.png");
+    }
+  }
+
   .badges{
     position: fixed !important;
     bottom: 24px !important;
@@ -307,29 +332,43 @@ header {
 }
 
 .promotion {
-  height: 693px;
   background-color: #f6f5ef;
   position: relative;
   transition: height .4s;
   overflow: hidden;
+  border: 1px solid yellow;
+  .inner{
+    display: flex;
+    .inner__left {
+      width: 65%;
+      height: 100%;
+    }
+    .inner__right {
+      width: 35%;
+      height: 100%;
+      padding: 10px;
+      border: 2px dotted blue;
+    }
+  }
+  
   .swiper-container {
-    width: 1920px;
-    height: 553px;
+    width: 700px;
+    height: 395px;
+    border: 1px solid red;
     position: relative;
     left: 50%;
-    margin-left: calc((1920px) / -2);
+    margin-left: calc((700px) / -2);
   }
   .swiper-slide {
     opacity : .5;
     transition: 1s;
+    img{ width: 700px;}
   }
   .swiper-slide-active {
     opacity: 1;
   }
   .swiper-pagination {
-    bottom: 40px;
-    left: 0;
-    right: 0;
+    bottom: 20px;
     .swiper-pagination-bullet {
       background-color: transparent;
       width: 12px;
@@ -348,24 +387,24 @@ header {
   }
   .swiper-prev, .swiper-next {
     width: 42px;
-  height: 42px;
-  border: 2px solid $gray3;
-  border-radius: 50%;
-  position: absolute;
-  top: 300px;
-  z-index: 1;
-  cursor: pointer;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 42px;
+    border: 2px solid $white;
+    background-color: $red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
   }
   .swiper-prev {
-    left: 50%;
-    margin-left: -600px;
+    left: 600px;
   }
   .swiper-next {
-    right: 50%;
-    margin-right: -600px;
+    left: 650px;
   }
 }
