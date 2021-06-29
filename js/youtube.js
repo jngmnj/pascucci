@@ -3,6 +3,8 @@ var YouTubeIframeLoader = require('youtube-iframe');
 YouTubeIframeLoader.load(function(YT) {
     new YT.Player('player', {
       videoId: 'A2clOFkrJdI', //url에 ID값 있음
+      // host: 'https://www.youtube.com',
+      host: `${window.location.protocol}//www.youtube.com`,
       playerVars: {
         autoplay: true,
         loop: true,
